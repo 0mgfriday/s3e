@@ -1,4 +1,4 @@
-module github.com/0mgfriday/s3e/cmd/s3e
+module github.com/0mgfriday/s3e
 
 go 1.23.0
 
