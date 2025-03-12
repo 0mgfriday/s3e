@@ -43,7 +43,8 @@ func main() {
 	region, getRegionErr := getRegion(*bucketName)
 	if getRegionErr == nil && region != "" {
 		fmt.Println("Bucket:", *bucketName)
-		fmt.Println("Region", region)
+		fmt.Println("Region:", region)
+		fmt.Println("---")
 
 		cfg, err := config.LoadDefaultConfig(context.TODO(),
 			config.WithCredentialsProvider(aws.AnonymousCredentials{}),
