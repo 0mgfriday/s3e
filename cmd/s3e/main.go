@@ -98,7 +98,7 @@ type s3Enum struct {
 }
 
 func (e s3Enum) listWithPrefix(bucket string, prefix string) {
-	output, err := e.client.ListObjects(context.TODO(), &s3.ListObjectsInput{
+	output, err := e.client.ListObjectsV2(context.TODO(), &s3.ListObjectsV2Input{
 		Bucket:    aws.String(bucket),
 		Prefix:    aws.String(prefix),
 		Delimiter: aws.String("/"),
